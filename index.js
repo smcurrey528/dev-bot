@@ -79,15 +79,18 @@ controller.on('rtm_close', function (bot) {
 /**
  * Core bot logic goes here!
  */
-// BEGIN EDITING HERE!
 
 controller.on('bot_channel_join', function (bot, message) {
     bot.reply(message, "npm run Dev-Bot, yall!")
 });
 
-controller.hears('hello', 'direct_message', function (bot, message) {
-    bot.reply(message, 'Howdy fellow dev! How goes coding?');
-});
+controller.hears(
+    ['hello', 'hi', 'greetings', 'hey', 'howdy', 'hola', 'bonjour'],
+    ['direct_mention', 'mention', 'direct_message'],
+    function(bot,message) {
+        bot.reply(message,'Howdy, fellow dev! How goes coding?');
+    }
+);
 
 
 controller.on('direct_message,mention,direct_mention', function (bot, message) {
