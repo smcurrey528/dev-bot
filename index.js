@@ -82,18 +82,14 @@ controller.on('rtm_close', function (bot) {
 // BEGIN EDITING HERE!
 
 controller.on('bot_channel_join', function (bot, message) {
-    bot.reply(message, "NPM Start Dev-Bot, yall!")
+    bot.reply(message, "npm run Dev-Bot, yall!")
 });
 
 controller.hears('hello', 'direct_message', function (bot, message) {
-    bot.reply(message, 'Hello fellow dev!');
+    bot.reply(message, 'Howdy fellow dev! How goes coding?');
 });
 
 
-/**
- * AN example of what could be:
- * Any un-handled direct mention gets a reaction and a pat response!
- */
 controller.on('direct_message,mention,direct_mention', function (bot, message) {
    bot.api.reactions.add({
        timestamp: message.ts,
@@ -103,6 +99,6 @@ controller.on('direct_message,mention,direct_mention', function (bot, message) {
        if (err) {
            console.log(err)
        }
-       bot.reply(message, 'I heard you loud and clear boss.');
+       bot.reply(message, 'Don\'t tell me how to React');
    });
 });
