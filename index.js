@@ -84,6 +84,10 @@ controller.on('bot_channel_join', function (bot, message) {
     bot.reply(message, "npm run Dev-Bot, yall!")
 });
 
+controller.on('user_channel_join', function(bot, message) {
+    bot.reply(message, 'git init new groupie')
+});
+
 controller.hears(
     ['hello', 'hi', 'greetings', 'hey', 'howdy', 'hola', 'bonjour'],
     ['direct_mention', 'mention', 'direct_message'],
@@ -91,6 +95,31 @@ controller.hears(
         bot.reply(message,'Howdy, fellow dev! How goes coding?');
     }
 );
+
+controller.hears(
+    ['coffee'], ['mention', 'direct_mention', 'direct_message'],
+    function(bot, message) {
+    bot.reply(message, 'if (coffee.Empty) coffee.Refill(); else coffee.Drink();')
+    }
+);
+
+controller.hears(
+    ['javascript'],
+    ['direct_mention', 'mention', 'direct_message'],
+    function(bot,message) {
+        bot.reply(message,'Why was the JavaScript developer sad? Because he didn’t Node how to Express himself');
+    }
+);
+
+controller.hears(
+    ['bug'],
+    ['direct_mention', 'mention', 'direct_message'],
+    function(bot,message) {
+        bot.reply(message,'How do you comfort a bug? You console it');
+    }
+);
+
+
 
 
 controller.on('direct_message,mention,direct_mention', function (bot, message) {

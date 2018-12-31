@@ -20,6 +20,6 @@ For my first slackbot, I decided to create a Dev-Bot, a slack bot that would sen
 
 Since I am new to creating bots, I used Slack's BotKit to build my custom bot using Node.js. This is a great resource to use if you want to create your own bot because it also walks you through using your local tunnel to connect the Slack integration. 
 
-
+Botkit has a special event handler called hears() that makes it easy to configure your bot to listen for this type of trigger. 
 
 
