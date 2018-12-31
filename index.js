@@ -124,7 +124,7 @@ controller.hears('error','direct_mention, mention, direct_message', function(bot
   bot.startConversation(message, function(err, convo) {
     convo.say('Oh boy, dev tools time!');
     convo.ask('Why did the functional component feel lost?', function(answer, convo) {
-      var error_type = answer.text;
+      const joke_type = answer.text;
       convo.say('Because it didn’t know what state it was in!');
     });
   });
