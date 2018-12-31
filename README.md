@@ -1,6 +1,6 @@
 # dev-bot
 
-![]'https://i.imgur.com/2aHv5OG.png'
+# ![](https://i.imgur.com/2aHv5OG.png) 
 
 ## Wanting to build a Slack Bot
 
@@ -22,7 +22,9 @@ For my first slackbot, I decided to create a Dev-Bot, a slack bot that would sen
 
 Since I am new to creating bots, I used Slack's BotKit to build my custom bot using Node.js. This is a great resource to use if you want to create your own bot because it also walks you through using your local tunnel to connect the Slack integration. 
 
-![] 'https://i.imgur.com/uThxy3k.png'
+#![](https://i.imgur.com/uThxy3k.png)
+
+
 
 
 
