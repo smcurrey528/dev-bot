@@ -124,60 +124,52 @@ controller.hears('error','direct_mention, mention, direct_message', function(bot
 
     convo.ask({
         attachments:[
-            {
-                title: 'Did you check your console?',
-                callback_id: '123',
-                attachment_type: 'default',
-                actions: [
                     {
-                        "name":"yes",
-                        "text": "Yes",
-                        "value": "yes",
-                        "type": "button",
-                    },
-                    {
-                        "name":"no",
-                        "text": "No",
-                        "value": "no",
-                        "type": "button",
+                        title: 'Did you check your console?',
+                        callback_id: '123',
+                        attachment_type: 'default',
+                        actions: [
+                            {
+                                "name":"yes",
+                                "text": "Yes",
+                                "value": "yes",
+                                "type": "button",
+                            },
+                            {
+                                "name":"no",
+                                "text": "No",
+                                "value": "no",
+                                "type": "button",
+                            }
+                        ]
                     }
                 ]
-            }
-        ]
-    },[
-        {
-            pattern: "yes",
-            callback: function(reply, convo) {
-                convo.say('FABULOUS!');
-                convo.next();
-                // do something awesome here.
-            }
-        },
-        {
-            pattern: "no",
-            callback: function(reply, convo) {
-                convo.say('Too bad');
-                convo.next();
-            }
-        },
-        {
-            default: true,
-            callback: function(reply, convo) {
-                // do nothing
-            }
-        }
-    ]);
+            },[
+                {
+                    pattern: "yes",
+                    callback: function(reply, convo) {
+                        convo.say('FABULOUS!');
+                        convo.next();
+                    }
+                },
+                {
+                    pattern: "no",
+                    callback: function(reply, convo) {
+                        convo.say('Too bad');
+                        convo.next();
+                    }
+                },
+                {
+                    default: true,
+                    callback: function(reply, convo) {
+                        // do nothing
+                    }
+                }
+         ]);
+    });
 });
 
-//   bot.startConversation(message, function(err, convo) {
-//     convo.say('Oh boy, dev tools time!');
-//     convo.ask('Why did the functional component feel lost?', function(answer, convo) {
-//       const joke_type = answer.text;
-//       storeJokeType(convo.context.user, joke_type)
-//       convo.say('Because it didn’t know what state it was in!');
-//     });
-//   });
-// });
+
 
 
 
