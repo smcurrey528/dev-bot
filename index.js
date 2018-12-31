@@ -14,7 +14,7 @@ function onInstallation(bot, installer) {
             if (err) {
                 console.log(err);
             } else {
-                convo.say('I am a bot that has just joined your team');
+                convo.say('Hi! I am dev-bot. I tell dev jokes when bugs make you sad');
                 convo.say('You must now /invite me to a channel so that I can be of use!');
             }
         });
@@ -82,11 +82,11 @@ controller.on('rtm_close', function (bot) {
 // BEGIN EDITING HERE!
 
 controller.on('bot_channel_join', function (bot, message) {
-    bot.reply(message, "I'm here!")
+    bot.reply(message, "NPM Start Dev-Bot, yall!")
 });
 
 controller.hears('hello', 'direct_message', function (bot, message) {
-    bot.reply(message, 'Hello!');
+    bot.reply(message, 'Hello fellow dev!');
 });
 
 
@@ -94,15 +94,15 @@ controller.hears('hello', 'direct_message', function (bot, message) {
  * AN example of what could be:
  * Any un-handled direct mention gets a reaction and a pat response!
  */
-//controller.on('direct_message,mention,direct_mention', function (bot, message) {
-//    bot.api.reactions.add({
-//        timestamp: message.ts,
-//        channel: message.channel,
-//        name: 'robot_face',
-//    }, function (err) {
-//        if (err) {
-//            console.log(err)
-//        }
-//        bot.reply(message, 'I heard you loud and clear boss.');
-//    });
-//});
+controller.on('direct_message,mention,direct_mention', function (bot, message) {
+   bot.api.reactions.add({
+       timestamp: message.ts,
+       channel: message.channel,
+       name: 'robot_face',
+   }, function (err) {
+       if (err) {
+           console.log(err)
+       }
+       bot.reply(message, 'I heard you loud and clear boss.');
+   });
+});
