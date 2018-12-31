@@ -1,7 +1,7 @@
 {
-  "name": "easy-peasy-bot",
+  "name": "dev-bot",
   "version": "1.0.0",
-  "description": "The awesomest bot evar.",
+  "description": "The bot that responds with dev jokes.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DEGoodmanWilson/easy-peasy-bot-app.git"
+    "url": "https://github.com/smcurrey528/dev-bot"
   },
   "keywords": [
     "slack",
