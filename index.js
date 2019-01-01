@@ -104,6 +104,13 @@ controller.hears(
 );
 
 controller.hears(
+    ['UI'], ['mention', 'direct_mention', 'direct_message'],
+    function(bot, message) {
+    bot.reply(message, 'A user interface is like a joke. If you have to explain it, then it isn\'t good.')
+    }
+);
+
+controller.hears(
     ['javascript'],
     ['direct_mention', 'mention', 'direct_message'],
     function(bot,message) {
